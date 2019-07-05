@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <h1>BKT Probability Simulator</h1>
+      <h4 style="font-weight: normal">Drag the sliders to adjust the probabilities.</h4>
+      <br><br/>
+
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   <body>
+      <div class="slidecontainer">
+         <h3>P(init): <span id="demoI"></span></h3>
+         <input type="range" min="0.0" max="1.0" value="0.5" step="0.01" class="slider"
+                style="background-image: linear-gradient(to right, #f0c297, #fccfcf)" id="init" oninput="updateI(this.value)">
+
+         <h3>P(trans): <span id="demoT"></span></h3>
+         <input type="range" min="0.0" max="1.0" value="0.5" step="0.01" class="slider"
+                style="background-image: linear-gradient(to right, #f2b3c3, #e0d1e8)" id="trans" oninput="updateT(this.value)">
+
+         <h3>P(slip): <span id="demoS"></span></h3>
+         <input type="range" min="0.0" max="1.0" value="0.5" step="0.01" class="slider"
+                style="background-image: linear-gradient(to right, #d3cef2, #c2dff0)" id="slip" oninput="updateS(this.value)">
+
+         <h3>P(guess): <span id="demoG"></span></h3>
+         <input type="range" min="0.0" max="1.0" value="0.5" step="0.01" class="slider" id="guess" oninput="updateG(this.value)">
+
+         <br><br/>
+         <br><br/>
+
+         <h2>P(learned if correct): <span id="correct"></span></h2>
+         <h2>P(learned if wrong): <span id="wrong"></span></h2>
+         <h2>P(correct): <span id="likelihood"></span></h2>
+
+      </div>
+      <script type="text/javascript" src="BKT.js"></script>
+   </body>
+</html>
